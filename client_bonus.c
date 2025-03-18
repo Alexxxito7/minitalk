@@ -36,7 +36,10 @@ void	send_message_back(int sig, siginfo_t *info, void *context)
 	(void) context;
 	(void) info;
 	if (sig == SIGUSR2)
+	{
+		ft_printf("Server received message\n");
 		exit(1);
+	}
 	g_signalcheck = 1;
 }
 
